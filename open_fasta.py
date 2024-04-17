@@ -1,0 +1,12 @@
+#NOMBRO EL ARCHIVO Y LO ALMACENO EN UNA VARIABLE
+file = "hpv_16_fasta.txt"
+#LECTURA DEL ARCHIVO 
+read_function = open(file, "r")
+#ALMACENO EL CONTENIDO DEL ARCHIVO QUE LEO CON LA FUNCION ANTERIOR 
+seq = read_function.read()
+
+#ELIMINAMOS CARACTERES QUE POSIBLEMENTE PUEDEN ESTAR EN NUESTRA SECUENCIA QUE DIFICULTARAN LA TRANSCRIPCION LUEGO
+seq = seq.replace("\n", "")
+seq = seq.replace("\r", "")
+
+print(seq)
